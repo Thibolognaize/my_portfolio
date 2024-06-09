@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projets{% endblock %}
+
+{% block body %}
+<!-- Projets Section -->
+<section id="projets" class="container mx-auto p-6 ">
+    <h2 class="text-3xl font-bold mb-4">Mes projets</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="bg-white shadow-md rounded-lg p-4">
+            <h3 class="text-xl font-bold text-neutral-950">Projet 1: Portfolio Personnel</h3>
+            <p class="text-neutral-950 mb-2">C'est justement ce projet là que vous consultez. <br>Je l'ai développé from scratch sur VsCode avec le framework TailwindCss.</p>
+            <div class="relative">
+                <img src="/img/photo/image1.png" alt="Voir le projet" class="w-full cursor-pointer">
+                <div class="hidden absolute top-0 left-0 bg-black bg-opacity-50 w-full h-full flex justify-center items-center" id="image1Modal">
+                  <img src="/img/photo/image1.png" alt="" class="max-w-full max-h-full">
+                </div>
+                <a href="link-to-project2.com" target="_blank" class="text-blue-500 hover:underline">Voir le projet</a>
+            </div>      
+        </div>
+
+        <div class="bg-white shadow-md rounded-lg p-4">
+            <h3 class="text-xl font-bold text-neutral-950">Projet 2: Ultimate Pokedex</h3>
+            <p class="text-neutral-950 mb-2">Site web utilisant un script Js pour récupérer les informations de l'api Tyradex. <br>Ce site répertorie 
+                les pokemons de première génération. 
+            </p>
+            <div class="hidden absolute top-0 left-0 bg-black bg-opacity-50 w-full h-full flex justify-center items-center" id="image1Modal">
+                <img src="/img/photo/image2.png" alt="Voir le projet" class="max-w-full max-h-full">
+              </div>
+            <a href="link-to-project2.com" target="_blank" class="text-blue-500 hover:underline">Voir le projet</a>
+        </div>
+
+        <div class="bg-white shadow-md rounded-lg p-4">
+            <h3 class="text-xl font-bold text-neutral-950">Projet 3: Weather-app</h3>
+            <p class="text-neutral-950 mb-2">Comme son nom l'indique c'est une application web qui affiche la météo en temps réel sur une ville donnée. <br>Elle utilise l'api Weather map.</p>
+            <div class="hidden absolute top-0 left-0 bg-black bg-opacity-50 w-full h-full flex justify-center items-center" id="image1Modal">
+                <img src="/img/photo/image3.png" alt="Voir le projet" class="max-w-full max-h-full">
+              </div>
+            <a href="link-to-project3.com" target="_blank" class="text-blue-500 hover:underline">Voir le projet</a>
+        </div>
+</section>
+
+{% endblock %}

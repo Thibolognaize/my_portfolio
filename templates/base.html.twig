@@ -11,7 +11,41 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body>
+    {# CDN Tailwind inité | class body #}
+    <body class="bg-sky-950 text-stone-300 ">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+            <!-- Header Section -->
+        <header class="bg-slate-950 shadow-xl shadow-slate-950/50 bg-center bg-gradient-to-tl from-cyan-950 rounded-b-lg border-double" >
+            <div class="container mx-auto p-6 flex justify-between items-center ">
+                <div class="flex items-center ">
+                    <img src="{{asset('images/img/photo/pp.jpg')}}" alt="Photo de Thibault Feat" class="size-32 rounded-full mr-4 object-cover border-4">
+                    <div>
+                        <h1 class="text-6xl font-bold">Thibault Feat</h1>
+                        <h2 class="text-6xl text-lg ">Développeur WEB</h2>
+                    </div>
+                </div>
+                <!-- Mes boutons -->
+                <nav class="flex space-x-8">
+                    <a href="{{ path('app_main') }}" class="btn text-neutral-950 hover:text-blue-500 border-2 rounded-full p-2 focus:outline-none bg-violet-50">Accueil</a> {# Lien Accueil #}
+                    
+                    <a href="#compétences" class="btn text-neutral-950 hover:text-blue-500 border-2 rounded-full p-2 focus:outline-none bg-violet-50">Compétences</a> {# Lien Compétences / Delete ? #}
+                    
+                    <a href="{{ path('app_projets') }}" class="btn text-neutral-950 hover:text-blue-500 border-2 rounded-full p-2 focus:outline-none bg-violet-50">Projets</a>  {# Lien Projets #}
+                    
+                    <a href="{{ path('app_veille') }}" class="btn text-neutral-950 hover:text-blue-500 border-2 rounded-full p-2 focus:outline-none bg-violet-50">Veille informatique</a> {# Lien Veille Info #}
+
+                    <a href="#contact" class="btn text-neutral-950 hover:text-blue-500 border-2 rounded-full p-2 focus:outline-none bg-violet-50">Contact</a> {# Lien Contact / Delete ?  #}
+                    
+                </nav>
+            </div>
+        </header>
+
         {% block body %}{% endblock %}
+        {# Footer #}
+        <footer class=" w-full bg-slate-950 bg-gradient-to-r from-cyan-950 shadow-xl shadow-slate-950/50 p-6 text-center">
+            <p>&copy; 2024 Thibault Feat. Tous droits réservés.</p>
+        </footer>        
+
     </body>
 </html>

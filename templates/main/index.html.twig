@@ -1,0 +1,140 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Portfolio - Thibault FEAT{% endblock %}
+
+{% block body %}
+{# Ecrire le code ici #}
+<body>
+
+    <!-- Présentation Section -->
+    <section id="home" class="container mx-auto p-6 pt-10 shadow-inner">
+        <div class="bg-white shadow-md rounded-lg p-6 ">
+            <h2 class="text-3xl font-bold mb-4 text-neutral-950 text-center">Bienvenue sur mon portfolio !</h2>
+            <p class="text-gray-700 text-center p-3 text-lg">Je suis Thibault FEAT, étudiant en première année de BTS SIO <em>(Services Informatiques aux Organisations)</em>, avec une spécialisation en SLAM <em>(Solutions Logicielles et Applications Métier)</em> à l'Esicad de Montpellier.
+                <!-- <br> -->
+                Depuis le début de mes études en BTS SIO, j'ai développé une passion pour l'informatique. C'est à travers cette passion que j'ai exploré le développement web et que j'ai décidé d'en faire ma carrière future.
+                <br><br>
+                Pour obtenir plus d'informations, je vous invite à télécharger mon CV ci-dessous.
+                <br><br>
+                ⬇️⬇️⬇️
+            </p>
+        </div>
+
+        <div class="flex justify-center">
+            <a href="{{asset('images/dl/CV_FEAT_2024.pdf')}}" target="_blank"> {# Lien vers download du CV #}
+                <button class="flex justify-center hover:text-blue-500 border-2 rounded-full p-2 mt-9  bg-red-400">Téléchargez mon CV</button>
+            </a>
+        </div>
+    </section>
+
+    <!--Compétences Section-->
+    <section id="competences" class="container mx-auto p-6">
+        <h2 class="text-3xl font-bold mb-4">Mes compétences techniques</h2>
+        <ul class="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
+                <div class="flex items-center mb-2">
+                    <img src="{{asset('images/img/logo/html5logo.png')}}" alt="HTML5 Logo" class="h-8 w-8 mr-2">
+                    <span>HTML5</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 85%">85%</div>
+                </div>
+            </li>
+            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
+                <div class="flex items-center mb-2">
+                    <img src="{{asset('images/img/logo/csslogo.png')}}" alt="CSS3 Logo" class="h-8 w-8 mr-2">
+                    <span>CSS3</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 75%">75%</div>
+                </div>
+            </li>
+            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
+                <div class="flex items-center mb-2">
+                    <img src="{{asset('images/img/logo/jslogo.png')}}" alt="JavaScript Logo" class="h-8 w-8 mr-2">
+                    <span>JavaScript</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 50%">50%</div>
+                </div>
+            </li>
+            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
+                <div class="flex items-center mb-2">
+                    <img src="{{asset('images/img/logo/tailwindcsslogo.png')}}" alt="TailwindCSS Logo" class="h-8 w-8 mr-2">
+                    <span>TailwindCSS</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 70%">70%</div>
+                </div>
+            </li>
+            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
+                <div class="flex items-center mb-2">
+                    <img src="{{asset('images/img/logo/phplogo.png')}}" alt="PHP Logo" class="h-8 w-8 mr-2">
+                    <span>PHP</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 70%">70%</div>
+                </div>
+            </li>
+            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
+                <div class="flex items-center mb-2">
+                    <img src="{{asset('images/img/logo/mysqllogo.png')}}" alt="MySQL/MariaDB Logo" class="h-8 w-8 mr-2">
+                    <span>MySQL/MariaDB</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 65%">65%</div>
+                </div>
+            </li>
+            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
+                <div class="flex items-center mb-2">
+                    <img src="{{asset('images/img/logo/maclogo.png')}}" alt="MacOS Logo" class="h-8 w-8 mr-2">
+                    <span>MacOS</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 70%">75%</div>
+                </div>
+            </li>
+            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
+                <div class="flex items-center mb-2">
+                    <img src="{{asset('images/img/logo/winlogo.png')}}" alt="Windows Logo" class="h-8 w-8 mr-2">
+                    <span>Windows</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 90%">90%</div>
+                </div>
+            </li>
+            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
+                <div class="flex items-center mb-2">
+                    <img src="{{asset('images/img/logo/linuxlogo.png')}}" alt="Linux Logo" class="h-8 w-8 mr-2">
+                    <span>Linux</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 85%">85%</div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto p-6 pb-10">
+        <h2 class="text-3xl font-bold mb-4">Contactez moi</h2>
+        <form action="submit-form.php" method="post" class="bg-white shadow-md rounded-lg p-6">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 mb-2">Nom:</label>
+                <input type="text" id="name" name="name" required class="w-full px-3 py-2 border rounded-lg">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 mb-2">Email:</label>
+                <input type="email" id="email" name="email" required class="w-full px-3 py-2 border rounded-lg">
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-gray-700 mb-2">Message:</label>
+                <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 border rounded-lg"></textarea>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Envoyer</button>
+        </form>
+    </section>
+
+
+{% endblock %}
