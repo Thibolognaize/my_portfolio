@@ -6,6 +6,15 @@
 {# Ecrire le code ici #}
 <body>
 
+    {# Afficher le flash message #}
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
     <!-- Présentation Section -->
     <section id="home" class="container mx-auto p-6 pt-10 shadow-inner">
         <div class="bg-white shadow-md rounded-lg p-6 ">
@@ -22,7 +31,7 @@
 
         <div class="flex justify-center">
             <a href="{{asset('images/dl/CV_FEAT_2024.pdf')}}" target="_blank"> {# Lien vers download du CV #}
-                <button class="flex justify-center hover:text-blue-500 border-2 rounded-full p-2 mt-9  bg-red-400">Téléchargez mon CV</button>
+                <button class="flex justify-center border-2 rounded-full p-2 mt-9  bg-red-500 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-slate-500 duration-300">Téléchargez mon CV</button>
             </a>
         </div>
     </section>
@@ -30,109 +39,217 @@
     <!--Compétences Section-->
     <section id="competences" class="container mx-auto p-6">
         <h2 class="text-3xl font-bold mb-4">Mes compétences techniques</h2>
+        
         <ul class="grid grid-cols-2 md:grid-cols-3 gap-6">
-            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
-                <div class="flex items-center mb-2">
-                    <img src="{{asset('images/img/logo/html5logo.png')}}" alt="HTML5 Logo" class="h-8 w-8 mr-2">
-                    <span>HTML5</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 85%">85%</div>
-                </div>
-            </li>
-            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
-                <div class="flex items-center mb-2">
-                    <img src="{{asset('images/img/logo/csslogo.png')}}" alt="CSS3 Logo" class="h-8 w-8 mr-2">
-                    <span>CSS3</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 75%">75%</div>
-                </div>
-            </li>
-            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
-                <div class="flex items-center mb-2">
-                    <img src="{{asset('images/img/logo/jslogo.png')}}" alt="JavaScript Logo" class="h-8 w-8 mr-2">
-                    <span>JavaScript</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 50%">50%</div>
-                </div>
-            </li>
-            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
-                <div class="flex items-center mb-2">
-                    <img src="{{asset('images/img/logo/tailwindcsslogo.png')}}" alt="TailwindCSS Logo" class="h-8 w-8 mr-2">
-                    <span>TailwindCSS</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 70%">70%</div>
-                </div>
-            </li>
-            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
-                <div class="flex items-center mb-2">
-                    <img src="{{asset('images/img/logo/phplogo.png')}}" alt="PHP Logo" class="h-8 w-8 mr-2">
-                    <span>PHP</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 70%">70%</div>
-                </div>
-            </li>
-            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
-                <div class="flex items-center mb-2">
-                    <img src="{{asset('images/img/logo/mysqllogo.png')}}" alt="MySQL/MariaDB Logo" class="h-8 w-8 mr-2">
-                    <span>MySQL/MariaDB</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 65%">65%</div>
-                </div>
-            </li>
-            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
-                <div class="flex items-center mb-2">
-                    <img src="{{asset('images/img/logo/maclogo.png')}}" alt="MacOS Logo" class="h-8 w-8 mr-2">
-                    <span>MacOS</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 70%">75%</div>
-                </div>
-            </li>
-            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
-                <div class="flex items-center mb-2">
-                    <img src="{{asset('images/img/logo/winlogo.png')}}" alt="Windows Logo" class="h-8 w-8 mr-2">
-                    <span>Windows</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 90%">90%</div>
-                </div>
-            </li>
-            <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950">
-                <div class="flex items-center mb-2">
-                    <img src="{{asset('images/img/logo/linuxlogo.png')}}" alt="Linux Logo" class="h-8 w-8 mr-2">
-                    <span>Linux</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-                    <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 85%">85%</div>
-                </div>
-            </li>
+            <a href="https://fr.wikipedia.org/wiki/HTML5">
+                <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950 transition duration-300 transform hover:-translate-y-1 hover:bg-gray-200">
+                    <div class="flex items-center mb-2 ">
+                        <img src="{{asset('images/img/logo/html5logo.png')}}" alt="HTML5 Logo" class="h-8 w-8 mr-2">
+                        <span>HTML5</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                        <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 85%">85%</div>
+                    </div>
+                </li>
+            </a>
+            <a href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade">
+                <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950 transition duration-300 transform hover:-translate-y-1 hover:bg-gray-200">
+                    <div class="flex items-center mb-2">
+                        <img src="{{asset('images/img/logo/csslogo.png')}}" alt="CSS3 Logo" class="h-8 w-8 mr-2">
+                        <span>CSS3</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                        <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 75%">75%</div>
+                    </div>
+                </li>
+            </a>
+            <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript">    
+                <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950 transition duration-300 transform hover:-translate-y-1 hover:bg-gray-200">
+                    <div class="flex items-center mb-2">
+                        <img src="{{asset('images/img/logo/jslogo.png')}}" alt="JavaScript Logo" class="h-8 w-8 mr-2">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                        <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 50%">50%</div>
+                    </div>
+                </li>
+            </a>
+            <a href="https://tailwindcss.com/">
+                <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950 transition duration-300 transform hover:-translate-y-1 hover:bg-gray-200">
+                    <div class="flex items-center mb-2">
+                        <img src="{{asset('images/img/logo/tailwindcsslogo.png')}}" alt="TailwindCSS Logo" class="h-8 w-8 mr-2">
+                        <span>TailwindCSS</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                        <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 70%">70%</div>
+                    </div>
+                </li>
+            </a>
+            <a href="https://www.php.net/">
+                <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950 transition duration-300 transform hover:-translate-y-1 hover:bg-gray-200">
+                    <div class="flex items-center mb-2">
+                        <img src="{{asset('images/img/logo/phplogo.png')}}" alt="PHP Logo" class="h-8 w-8 mr-2">
+                        <span>PHP</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                        <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 70%">70%</div>
+                    </div>
+                </li>
+            </a>
+            <a href="https://www.mysql.com/fr/">
+                <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950 transition duration-300 transform hover:-translate-y-1 hover:bg-gray-200">
+                    <div class="flex items-center mb-2">
+                        <img src="{{asset('images/img/logo/mysqllogo.png')}}" alt="MySQL/MariaDB Logo" class="h-8 w-8 mr-2">
+                        <span>MySQL/MariaDB</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                        <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 65%">65%</div>
+                    </div>
+                </li>
+            </a>
+            <a href="https://www.lemondeinformatique.fr/macos-x-100.html">
+                <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950 transition duration-300 transform hover:-translate-y-1 hover:bg-gray-200">
+                    <div class="flex items-center mb-2">
+                        <img src="{{asset('images/img/logo/maclogo.png')}}" alt="MacOS Logo" class="h-8 w-8 mr-2">
+                        <span>MacOS</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                        <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 70%">75%</div>
+                    </div>
+                </li>
+            </a>
+            <a href="https://www.microsoft.com/fr-fr/windows/windows-11?r=1">
+                <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950 transition duration-300 transform hover:-translate-y-1 hover:bg-gray-200">
+                    <div class="flex items-center mb-2">
+                        <img src="{{asset('images/img/logo/winlogo.png')}}" alt="Windows Logo" class="h-8 w-8 mr-2">
+                        <span>Windows</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                        <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 90%">90%</div>
+                    </div>
+                </li>
+            </a>
+            <a href="https://www.oracle.com/fr/linux/what-is-linux/">
+                <li class="flex flex-col bg-white shadow-md rounded-lg p-4 text-neutral-950 transition duration-300 transform hover:-translate-y-1 hover:bg-gray-200">
+                    <div class="flex items-center mb-2">
+                        <img src="{{asset('images/img/logo/linuxlogo.png')}}" alt="Linux Logo" class="h-8 w-8 mr-2">
+                        <span>Linux</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+                        <div class="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 85%">85%</div>
+                    </div>
+                </li>
+            </a>
         </ul>
     </section>
+
+    <!-- Ecole Section -->
+
+    <section id="competences" class="container mx-auto p-6 basis-6/12">
+        <h2 class="text-3xl font-bold mb-4">Mon école / Ma formation</h2>
+        
+        <section>
+            <div class="flex">
+                <div class="bg-white shadow-md rounded-lg p-6 mr-4 flex-grow flex-shrink">
+                    
+                    <p class="text-gray-700 p-3 text-lg text-justify mb-px	">
+                        Crée en 1983, <strong>l’ESICAD Montpellier</strong> est un acteur reconnu dans l’enseignement supérieur privé du Sud de la France, par la qualité de ses enseignements et l’encadrement apporté à ses étudiants. Avec plus de 700 alternants conclus chaque année, l'école bénéficie d'une forte notoriété auprès des entreprises de la région. Spécialisée dans les formations post-bac tertiaires, de BAC+2 à BAC+5, en formation initiale et en alternance, l’ESICAD Montpellier forme aux métiers du commerce, du management, de l’administration, de la gestion / finance, de <strong>l’informatique</strong>, du tourisme et de l’hôtellerie restauration.
+                    </p>
+                    <div class="container columns-3 mx-auto ">
+                        <img src="{{ asset('images/img/logo/ESICAD-logo.png') }}" alt="Logo-Esicad" class="size-9/12 ">
+                        <img src="{{ asset('images/img/photo/esicad-entree.png') }}" alt="Photo de l'Esicad#1" class="size-fit">
+                        <img src="{{ asset('images/img/photo/esicad-inte.png') }}" alt="Photo de l'Esicad#2" class="size-fit">
+                    </div>
+                </div>
+                
+                <div class="bg-white shadow-md rounded-lg p-6 flex-grow flex-shrink">
+                    <p class="text-gray-700 text-justify p-3 text-lg">
+                        Le <strong>BTS Services Informatiques aux Organisations (SIO)</strong> est une formation de deux ans très prisée en France pour ceux qui aspirent à une carrière dans le domaine de l'informatique. Ce diplôme polyvalent offre deux options distinctes :<br>
+                        L'option <strong>"Solutions d'Infrastructure, Systèmes et Réseaux" (SISR)</strong> se concentre sur la conception, la mise en place et la maintenance des infrastructures informatiques.<br>
+                        L'option <strong>"Solutions Logicielles et Applications Métiers" (SLAM)</strong> se concentre sur le développement d'applications et de solutions logicielles répondant aux besoins spécifiques des entreprises.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+
     
+    {# <section id="competences" class="container mx-auto p-6 basis-6/12">
+        <h2 class="text-3xl font-bold mb-4">Ma formation</h2>
+        
+        <div class="bg-white shadow-md rounded-lg p-6 ">
+            <p class="text-gray-700 text-left p-3 text-lg">
+                Crée en 1983, l’ESICAD Montpellier est un acteur reconnu dans l’enseignement supérieur privé du Sud de la France, par la qualité de ses enseignements et l’encadrement apporté à ses étudiants. Avec plus de 700 alternants conclus chaque année, l'école bénéficie d'une forte notoriété auprès des entreprises de la région.
+                Spécialisée dans les formations post-bac tertiaires, de BAC+2 à BAC+5, en formation initiale et en alternance, l’ESICAD Montpellier forme aux métiers du commerce, du management, de l’administration, de la gestion / finance, de l’informatique, du tourisme et de l’hôtellerie restauration.
+            </p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 ">
+            <p class="text-gray-700 text-left p-3 text-lg">
+                Crée en 1983, l’ESICAD Montpellier est un acteur reconnu dans l’enseignement supérieur privé du Sud de la France, par la qualité de ses enseignements et l’encadrement apporté à ses étudiants. Avec plus de 700 alternants conclus chaque année, l'école bénéficie d'une forte notoriété auprès des entreprises de la région.
+                Spécialisée dans les formations post-bac tertiaires, de BAC+2 à BAC+5, en formation initiale et en alternance, l’ESICAD Montpellier forme aux métiers du commerce, du management, de l’administration, de la gestion / finance, de l’informatique, du tourisme et de l’hôtellerie restauration.
+            </p>
+        </div>
+    </section> #}
+
+
+    <!-- Parcours Section -->
+    <section id="competences" class="container mx-auto p-6">
+        <h2 class="text-3xl font-bold mb-4">Mon parcours</h2>
+
+        <div class="bg-white shadow-md rounded-lg p-6 ">             {# Container #}
+            <ol class="relative border-s border-gray-200 divide-y">                  
+                <li class="mb-10 ms-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 borderborder-gray-900 bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-semibold	 leading-none text-gray-400 ">2018</time>
+                    <h3 class="text-lg font-semibold text-gray-900 pt-3">Bac Science économiques</h3>
+                    <p class="text-base font-normal text-gray-500 ">Lycée Champollion | Lattes</p>
+                </li>
+                <li class="mb-10 ms-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 borderborder-gray-900 bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-semibold	 leading-none text-gray-400">2020</time>
+                    <h3 class="text-lg font-semibold text-gray-900 pt-3">Diplôme Technicien Son</h3>
+                    <p class="text-base font-normal text-gray-500 ">Acfa Multimédia | Montpellier</p>
+                </li>
+                <li class="mb-10 ms-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 borderborder-gray-900 bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-semibold	 leading-none text-gray-400 ">2021</time>
+                    <h3 class="text-lg font-semibold text-gray-900 pt-3">Cycle pro musical</h3>
+                    <p class="text-base font-normal text-gray-500 ">JAM | Montpellier</p>
+                </li>
+                <li class="mb-10 ms-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 borderborder-gray-900 bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-semibold	 leading-none text-gray-400 ">2021 → 2022</time>
+                    <h3 class="text-lg font-semibold text-gray-900 pt-3">Employé polyvalent</h3>
+                    <p class="text-base font-normal text-gray-500 ">McDonald’s | Baillargues</p>
+                </li>
+                <li class="mb-4 ms-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 borderborder-gray-900 bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-semibold	 leading-none text-gray-400 ">2023 → Aujourd'hui</time>
+                    <h3 class="text-lg font-semibold text-gray-900 pt-3">Reconversion professionnelle: BTS SIO SLAM </h3>
+                    <p class="text-base font-normal text-gray-500 ">ESICAD | Montpellier</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="container mx-auto p-6 pb-10">
-        <h2 class="text-3xl font-bold mb-4">Contactez moi</h2>
-        <form action="submit-form.php" method="post" class="bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-3xl font-bold mb-4">Contactez moi | 🚧EN CONSTRUCTION🚧</h2>
+        <form action="/submit_form" method="POST" class="bg-white shadow-md rounded-lg p-6">
             <div class="mb-4">
-                <label for="name" class="block text-gray-700 mb-2">Nom:</label>
-                <input type="text" id="name" name="name" required class="w-full px-3 py-2 border rounded-lg">
+                <label for="name" class="block text-black mb-2">Nom:</label>
+                <input type="text" id="name" name="name" required class="w-full px-3 py-2 border rounded-lg text-black">
             </div>
             <div class="mb-4">
-                <label for="email" class="block text-gray-700 mb-2">Email:</label>
-                <input type="email" id="email" name="email" required class="w-full px-3 py-2 border rounded-lg">
+                <label for="email" class="block text-black mb-2">Email:</label>
+                <input type="email" id="email" name="email" required class="w-full px-3 py-2 border rounded-lg text-black">
             </div>
             <div class="mb-4">
-                <label for="message" class="block text-gray-700 mb-2">Message:</label>
-                <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 border rounded-lg"></textarea>
+                <label for="message" class="block text-black mb-2">Message:</label>
+                <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 border rounded-lg text-black"></textarea>
             </div>
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Envoyer</button>
+            <button type="submit" value="Submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Envoyer</button>
         </form>
     </section>
 

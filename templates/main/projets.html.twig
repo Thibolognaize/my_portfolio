@@ -4,41 +4,56 @@
 
 {% block body %}
 <!-- Projets Section -->
-<section id="projets" class="container mx-auto p-6 ">
+<section id="projets" class="container mx-auto p-6">
     <h2 class="text-3xl font-bold mb-4">Mes projets</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         
         <div class="bg-white shadow-md rounded-lg p-4">
             <h3 class="text-xl font-bold text-neutral-950">Projet 1: Portfolio Personnel</h3>
-            <p class="text-neutral-950 mb-2">C'est justement ce projet là que vous consultez. <br>Je l'ai développé from scratch sur VsCode avec le framework TailwindCss.</p>
-            <div class="relative">
-                <img src="/img/photo/image1.png" alt="Voir le projet" class="w-full cursor-pointer">
-                <div class="hidden absolute top-0 left-0 bg-black bg-opacity-50 w-full h-full flex justify-center items-center" id="image1Modal">
-                  <img src="/img/photo/image1.png" alt="" class="max-w-full max-h-full">
-                </div>
-                <a href="link-to-project2.com" target="_blank" class="text-blue-500 hover:underline">Voir le projet</a>
-            </div>      
+            <p class="text-neutral-950 mb-2">
+                C'est justement ce projet là que vous consultez. <br>La première version du projet fût réalisé à l'aide du CDN Tailwind CSS et tenait sur seulement une page. <br> Aujourd'hui afin de l'étoffer et de le rendre plus dynamique, j'utilise le framework Symfony ce qui m'offre l'opportunité de me familiariser avec cet outil.
+            </p>
+            <div class="object-scale-down h-1/2">
+                <a href="{{ asset('images/img/photo/image1.png') }}" target="_blank">
+                    <img src="{{ asset('images/img/photo/image1.png') }}" alt="Ouvrir l'image" class="w-full cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:bg-gray-200">
+                </a>
+                <a href="https://github.com/Thibolognaize/my_portfolio" target="_blank" class="text-blue-500 hover:underline">↳ Voir le projet sur GitHub</a>
+            </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg p-4">
             <h3 class="text-xl font-bold text-neutral-950">Projet 2: Ultimate Pokedex</h3>
-            <p class="text-neutral-950 mb-2">Site web utilisant un script Js pour récupérer les informations de l'api Tyradex. <br>Ce site répertorie 
-                les pokemons de première génération. 
-            </p>
-            <div class="hidden absolute top-0 left-0 bg-black bg-opacity-50 w-full h-full flex justify-center items-center" id="image1Modal">
-                <img src="/img/photo/image2.png" alt="Voir le projet" class="max-w-full max-h-full">
-              </div>
-            <a href="link-to-project2.com" target="_blank" class="text-blue-500 hover:underline">Voir le projet</a>
+            <p class="text-neutral-950 mb-2">Site web utilisant un script Js pour récupérer les informations de l'api Tyradex. <br>Ce site répertorie les pokemons de première génération.</p>
+            <div class="object-scale-down h-1/2">
+                <a href="{{ asset('images/img/photo/image2.png') }}" target="_blank">
+                    <img src="{{ asset('images/img/photo/image2.png') }}" alt="Ouvrir l'image" class="w-full cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:bg-gray-200 bottom-0">
+                </a>
+                <a href="https://github.com/Thibolognaize/Website_pokedex" target="_blank" class="text-blue-500 hover:underline">↳ Voir le projet sur GitHub</a>
+            </div>
         </div>
 
         <div class="bg-white shadow-md rounded-lg p-4">
             <h3 class="text-xl font-bold text-neutral-950">Projet 3: Weather-app</h3>
-            <p class="text-neutral-950 mb-2">Comme son nom l'indique c'est une application web qui affiche la météo en temps réel sur une ville donnée. <br>Elle utilise l'api Weather map.</p>
-            <div class="hidden absolute top-0 left-0 bg-black bg-opacity-50 w-full h-full flex justify-center items-center" id="image1Modal">
-                <img src="/img/photo/image3.png" alt="Voir le projet" class="max-w-full max-h-full">
-              </div>
-            <a href="link-to-project3.com" target="_blank" class="text-blue-500 hover:underline">Voir le projet</a>
+            <p class="text-neutral-950 mb-2">Comme son nom l'indique c'est une application web qui affiche la météo en temps réel sur une ville donnée. Elle utilise l'api Weather map.</p>
+            <div class="object-scale-down h-1/2">
+                <a href="{{ asset('images/img/photo/image3.png') }}" target="_blank">
+                    <img src="{{ asset('images/img/photo/image3.png') }}" alt="Ouvrir l'image" class="w-full h-full object-cover">
+                </a>
+                <a href="https://github.com/Thibolognaize/Weather-app" target="_blank" class="text-blue-500 hover:underline">↳ Voir le projet sur GitHub</a>
+            </div>
         </div>
+
+        <div class="bg-white shadow-md rounded-lg p-4">
+            <h3 class="text-xl font-bold text-neutral-950">Projet 4: Projet-tab</h3>
+            <p class="text-neutral-950 mb-2">C'est une application web dynamique qui permet de changer d'onglets tout en masquant les autres en utilisant du javascripts. Ce projet à pour vocation d'être réutilisé dans des projets futurs afin de rendre l'interface plus moderne.</p>
+            <div class="object-scale-down h-1/2">
+                <a href="{{ asset('images/img/photo/image4.png') }}" target="_blank" alt="Voir l'image">
+                    <img src="{{ asset('images/img/photo/image4.png') }}" alt="Ouvrir l'image" class="w-full h-full object-cover">
+                </a>
+                <a href="https://github.com/Thibolognaize/Projet_tabs" target="_blank" class="text-blue-500 hover:underline">↳ Voir le projet sur GitHub</a>
+            </div>
+        </div>
+    </div>
 </section>
 
 {% endblock %}
